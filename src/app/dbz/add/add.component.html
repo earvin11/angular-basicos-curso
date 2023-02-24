@@ -1,0 +1,22 @@
+<h3>Agregar <small>{{ newPj.name }}</small></h3>
+<hr>
+
+<!-- el evento ngSubmit viene del formModule importado en el module -->
+<form (ngSubmit)="add()">
+    <input 
+        type="text"
+        placeholder="Nombre"
+        name="name"
+        [(ngModel)]="newPj.name"
+    />
+    <input
+        type="number" 
+        placeholder="Poder"
+        name="power"
+        [(ngModel)]="newPj.power"
+    />
+
+    <button type="submit">
+        Agregar
+    </button>
+</form>
